@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Neighborhood Map Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar" data-bind="visible: showSideMenu">
+        <button class="fas fa-window-close" data-bind="click: openOrCloseMenu"></button>
+        <h1>Bay Area Tech Companies</h1>
+        <div>
+          <p class="filter">Filter</p>
+          <select class="menu-items" data-bind="options: categoryOptions, value: selectedCategory"></select>
+          <hr>
+          <ul data-bind="foreach: companyList">
+            <li class="list-item" data-bind="text: title, click: $parent.changeLocation, visible: isVisible"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="map"></div>
+    <button class="fas fa-list-alt" data-bind="click: openOrCloseMenu"></button>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/libs/knockout-3.2.0.js"></script>
+  <script src="js/locationData.js"></script>
+  <script src="js/app.js"></script>
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjjFi6ZnYSXZdBCIw8YpWjvHztU2czdAI&callback=initMap"
+    onerror="viewModel.mapError()">
+  </script>
+
+</html>

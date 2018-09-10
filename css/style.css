@@ -1,0 +1,125 @@
+:root {
+  --main-color: rgb(0, 156, 166);
+}
+
+html,
+body {
+  font-family: Arial, sans-serif;
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+}
+
+h1 {
+  font-size: 22px;
+  color: var(--main-color);
+  margin: 0 0 10px 0;
+  text-align: left;
+}
+
+#map {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#pano {
+  height: 250px;
+}
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+hr {
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+    height: 5px;
+    border: 0;
+}
+
+.title {
+  padding-top: 2px;
+}
+
+.infoWindow {
+  width: 230px;
+  height: 200px;
+  overflow: auto;
+}
+
+.infoHeader {
+  font-size: 20px;
+  color: var(--main-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  background-color: white;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar li:hover {
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.fa-window-close {
+  border: none;
+  background: none;
+  float: right;
+  cursor: pointer;
+  font-size: 20px;
+  color: ;
+}
+
+.fa-list-alt {
+  font-weight: 900;
+  font-size: 43px;
+  position: absolute;
+  top: 25px;
+  border: none;
+  background: none;
+  color: darkgrey;
+  cursor: pointer;
+}
+
+.filter {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 450px) {
+  .sidebar {
+    font-size: 12px;
+    width: 150px;
+    height: auto;
+    padding: 5px;
+  }
+  h1 {
+    font-size: 14px;
+    color: var(--main-color);
+    margin: 0 0 10px 0;
+    text-align: left;
+  }
+}
